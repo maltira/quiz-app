@@ -48,16 +48,18 @@ class ResultsScreen extends StatelessWidget {
                   textStyle: TextStyle(
                     fontSize: 24,
                     color: Colors.white,
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.bold,
                   )
                 ),
+                textAlign: TextAlign.center,
               ),
               SizedBox(height: 30,),
               QuestionsSummary(summaryData),
               SizedBox(height: 30,),
-              TextButton(
+              TextButton.icon(
                   onPressed: restartQuiz,
-                  child: Text("Restart Quiz!")
+                  label: Text("Restart Quiz!", style: TextStyle(color: Colors.white),),
+                  icon: Icon(Icons.restart_alt_outlined, color: Colors.white,),
               )
             ],
           ),
